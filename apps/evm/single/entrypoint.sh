@@ -25,6 +25,14 @@ if [ -n "$DA_NAMESPACE" ]; then
   da_namespace_flag="--rollkit.da.namespace $DA_NAMESPACE"
 fi
 
+# Importing DA auth token
+TOKEN_PATH=/volumes/da_auth_token/auth_token
+if [ ! -f "$TOKEN_PATH" ]; then
+    echo "$TOKEN_PATH does not exist. Exiting."
+    exit 1
+fi
+DA_AUTH_TOKEN=$(cat ${TOKEN_PATH})
+
 exec ./evm-single start \
   --evm.jwt-secret $EVM_JWT_SECRET \
   --evm.genesis-hash $EVM_GENESIS_HASH \
