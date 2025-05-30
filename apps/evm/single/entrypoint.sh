@@ -6,7 +6,7 @@ cd /usr/bin
 sleep 5
 
 if [ ! -f "$HOME/.evm-single/config/signer.json" ]; then
-    ./evm-single init --rollkit.node.aggregator=true --rollkit.signer.passphrase "$EVM_SIGNER_PASSPHRASE"
+  ./evm-single init --rollkit.node.aggregator=true --rollkit.signer.passphrase $EVM_SIGNER_PASSPHRASE
 fi
 
 # Conditionally add --rollkit.da.address if ROLLKIT_DA_ADDRESS is set
