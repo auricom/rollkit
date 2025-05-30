@@ -37,4 +37,4 @@ exec ./evm-single start \
   --rollkit.signer.passphrase $EVM_SIGNER_PASSPHRASE \
   $da_flag \
   $da_auth_token_flag \
-  $da_namespace_flag
+  $da_namespace_flag 
