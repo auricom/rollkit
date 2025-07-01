@@ -19,6 +19,9 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "github.com/libp2p/go-libp2p"
+        versions: ["6.0.23+incompatible", "< 0.20.0"]
     open-pull-requests-limit: 10
     labels:
       - T:dependencies
@@ -32,6 +35,9 @@ updates:
     directory: "/"
     schedule:
       interval: daily
+    ignore:
+      - dependency-name: "github.com/libp2p/go-libp2p"
+        versions: ["6.0.23+incompatible", "< 0.20.0"]
     labels:
       - T:dependencies
     # Group all patch updates into a single PR
